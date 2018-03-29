@@ -35,7 +35,10 @@ while ~feof(fileID)
         foutID = fopen(fullfile(fldr1,filename),'a');
         fprintf(foutID,'%d\n',EventId);
         fclose(foutID);
-        plot(EventId,CurrPeak,'x')  
+        plot(EventId,CurrPeak,'x')
+        xlabel('Counts')
+        ylabel('Amplitude')
+  
     else
 %       PrevNoiseLevel = std(y);
     end
